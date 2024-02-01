@@ -1,20 +1,16 @@
 import { Outlet } from 'react-router-dom'
 import Container from './components/layout/Container'
-import { Link } from 'react-router-dom'
+import NavBar from './components/layout/NavBar'
+import Footer from './components/layout/Footer'
 function App() {
 
   return (
     <>
-      <div>
-          <Link to={"/"}>Home</Link>
-          <Link to={"/company"}>Empresa</Link>
-          <Link to={"/contacts"}>Contato</Link>
-          <Link to={"/newproject"}>Novo Projeto</Link>
-      </div>
-      <Container>
-      <Outlet/>
+      <NavBar/>
+      <Container customClass="min_height">
+        <Outlet/>
       </Container>
-      <h2>footer</h2>
+      <Footer/>
     </>
   )
 }
